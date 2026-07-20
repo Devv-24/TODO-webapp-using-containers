@@ -1,42 +1,43 @@
 from fastapi import Fastapi
+import api 
 
 app = Fastapi()
 
 
-@app.get("/api/lists")
+@app.get("/api/list")
 def getLists():
-    return "ciao"
+    return api.getLists()
 
 
 @app.get("/api/list/{id}")
 def getList(id):
-    return "ciao"
+    return api.getList(id)
     
 @app.post("/api/list")
 def createList():
-    return "ciao"
+    return api.createList()
 
 @app.patch("/api/list/{id}")
 def updateList(id):
-    return "ciao"
+    return api.updateList(id)
 
 @app.delete("/api/list/{id}")
 def deleteList(id):
-    return "ciao"
+    return api.deleteList(id)
 
 
 @app.get("/api/item/{id}")
 def getItem(id):
-    return "ciao"
+    return api.getItem(id)
     
 @app.post("/api/item")
 def createItem():
-    return "ciao"
+    return api.createItem()
 
 @app.patch("/api/item/{id}")
 def updateItem(id):
-    return "ciao"
+    return api.updateItem(id)
 
 @app.delete("/api/item/{id}")
 def deleteItem(id):
-    return "ciao"
+    return api.deleteItem(id)
